@@ -4,7 +4,7 @@ import Container from "./commen/Container";
 
 function About() {
   return (
-    <section className="py-12">
+    <section className="py-12" id="about">
       <Container>
         <h2 className="text-2xl font-semibold mb-4">About</h2>
 

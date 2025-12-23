@@ -4,7 +4,7 @@ import Container from "./commen/Container";
 
 function Contact() {
   return (
-    <section className="py-12">
+    <section className="py-12" id="contact">
       <Container>
         <h2 className="text-2xl font-semibold mb-4">Contact</h2>
 

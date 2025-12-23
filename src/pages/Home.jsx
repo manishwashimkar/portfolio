@@ -1,4 +1,3 @@
-// import project from "../data/project";
 
 import React from "react";
 import Hero from "../components/Hero";
@@ -8,7 +7,7 @@ import Contact from "../components/Contact";
 
 function Home() {
   return (
-    <main>
+    <main id="home">
       <Hero />
       <About />
       <Projects />
