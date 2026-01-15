@@ -19,7 +19,6 @@ function Projects() {
                 {project.description}
               </p>
 
-              {/* Tech stack badges */}
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.techStack.map((tech) => (
                   <span
@@ -31,7 +30,6 @@ function Projects() {
                 ))}
               </div>
 
-              {/* Links */}
               <div className="flex gap-4 text-sm">
                 {project.liveUrl && (
                   <a

@@ -9,16 +9,18 @@ function Hero() {
       <Container>
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-            Hi, I’m Manish — MERN Stack Developer
+            Hi, I’m Manish — React Frontend Engineer
           </h1>
 
           <p className="text-lg text-gray-800 mb-4">
             I build and deploy accessible, performance-focused React
-            applications with clean architecture and predictable state Management.
+            applications with clean architecture and predictable state
+            Management.
           </p>
 
           <p className="text-sm text-gray-600">
-            Currently shipping real-world projects and refining my understanding of React internals.
+            Currently shipping real-world projects and refining my understanding
+            of React internals.
           </p>
           <div className="mt-6 hero-cta">
             <a
