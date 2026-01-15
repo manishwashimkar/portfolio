@@ -8,7 +8,7 @@ function Hero() {
   return (
     <section className="py-16" id="hero">
       <Container>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4 max-w-2xl">
           Hi, I’m Manish 👋
         </h1>
 

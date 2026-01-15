@@ -15,7 +15,10 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-black">
+              <a
+                href="#about"
+                className="hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:rounded-md"
+              >
                 About
               </a>
             </li>
