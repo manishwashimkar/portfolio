@@ -8,7 +8,7 @@ const projects = [
     focus: "Controlled inputs, derived state, predictable re-renders",
     learnings: "Learned how small state changes affect component re-renders.",
     techStack: ["React", "JavaScript", "TailwindCSS"],
-    liveUrl: "",
+    liveUrl: "#",
     repoUrl: "https://github.com/manishwashimkar/password-generator",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     learnings:
       "Learned how to maintain UI layer and Data layer in sync for better performance",
     techStack: ["HTML5", "CSS", , "JavaScript", "ReactJS"],
-    liveUrl: "",
+    liveUrl: "#",
     repoUrl: "https://github.com/manishwashimkar/state-driven-game-logic",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     focus: "Controlled inputs, derived state, predictable re-renders",
     learnings: "Learned how small state changes affect component re-renders.",
     techStack: ["HTML", "CSS", "JavaScript", "React", "TailwindCSS"],
-    liveUrl: "",
+    liveUrl: "#",
     repoUrl: "https://github.com/manishwashimkar/react-based-paytm-ui-clone",
   },
 ];
