@@ -19,7 +19,7 @@ const HeroSection = () => (
           Available for select projects
         </motion.p>
         <motion.h1
-          className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:mt-5 sm:text-5xl lg:text-6xl xl:text-[4.10rem]"
+          className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:mt-5 sm:text-5xl lg:text-6xl xl:text-[3.75rem]"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.1 }}
