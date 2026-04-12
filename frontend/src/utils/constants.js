@@ -32,14 +32,14 @@ export const highlights = [
 ];
 
 export const techStack = [
-  { name: "MongoDB", icon: SiMongodb, tone: "from-emerald-500/20 to-emerald-500/5" },
-  { name: "Express", icon: SiExpress, tone: "from-slate-500/20 to-slate-500/5" },
-  { name: "React", icon: FaReact, tone: "from-cyan-500/20 to-cyan-500/5" },
-  { name: "Node.js", icon: FaNodeJs, tone: "from-lime-500/20 to-lime-500/5" },
-  { name: "JavaScript", icon: SiJavascript, tone: "from-amber-500/20 to-amber-500/5" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, tone: "from-sky-500/20 to-sky-500/5" },
-  { name: "REST APIs", icon: FaServer, tone: "from-rose-500/20 to-rose-500/5" },
-  { name: "Data Modeling", icon: FaDatabase, tone: "from-violet-500/20 to-violet-500/5" },
+  { name: "MongoDB", icon: SiMongodb, tone: "from-emerald-500/20 to-emerald-500/5", proficiency: 85 },
+  { name: "Express", icon: SiExpress, tone: "from-slate-500/20 to-slate-500/5", proficiency: 80 },
+  { name: "React", icon: FaReact, tone: "from-cyan-500/20 to-cyan-500/5", proficiency: 90 },
+  { name: "Node.js", icon: FaNodeJs, tone: "from-lime-500/20 to-lime-500/5", proficiency: 85 },
+  { name: "JavaScript", icon: SiJavascript, tone: "from-amber-500/20 to-amber-500/5", proficiency: 95 },
+  { name: "Tailwind CSS", icon: SiTailwindcss, tone: "from-sky-500/20 to-sky-500/5", proficiency: 88 },
+  { name: "REST APIs", icon: FaServer, tone: "from-rose-500/20 to-rose-500/5", proficiency: 85 },
+  { name: "Data Modeling", icon: FaDatabase, tone: "from-violet-500/20 to-violet-500/5", proficiency: 80 },
 ];
 
 export const experienceTimeline = [
