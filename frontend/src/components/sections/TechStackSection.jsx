@@ -14,7 +14,7 @@ const TechStackSection = () => (
         />
 
         <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
-          {techStack.map(({ name, icon: Icon, tone }, index) => (
+          {techStack.map(({ name, icon: Icon, tone, proficiency }, index) => (
             <motion.div
               key={name}
               className={`glass-panel group bg-gradient-to-br ${tone} p-5 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-none`}
@@ -26,6 +26,19 @@ const TechStackSection = () => (
             >
               <Icon className="text-2xl text-accent transition duration-300 group-hover:scale-110 sm:text-3xl" />
               <h3 className="mt-4 text-base font-semibold text-slate-900 transition duration-300 group-hover:text-accent dark:text-white sm:text-lg">{name}</h3>
+              
+              <div className="mt-3 flex items-center gap-2">
+                <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden dark:bg-slate-700">
+                  <motion.div
+                    className="h-full bg-accent rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${proficiency}%` }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: index * 0.06 + 0.2, ease: "easeOut" }}
+                  />
+                </div>
+                <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">{proficiency}%</span>
+              </div>
             </motion.div>
           ))}
         </div>
