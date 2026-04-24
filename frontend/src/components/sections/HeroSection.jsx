@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 import { socialLinks, stats } from "../../utils/constants";
 
@@ -68,6 +69,15 @@ const HeroSection = () => (
             className="premium-button-primary w-full sm:w-auto"
           >
             View Projects
+          </a>
+          <a
+            href="/Manish-Washimkar-Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="premium-button-secondary w-full gap-2 sm:w-auto"
+          >
+            <FaArrowUpRightFromSquare className="text-xs" />
+            View Resume
           </a>
           <a
             href="#contact"
