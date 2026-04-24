@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
+import { FaArrowDown, FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
 import ThemeToggle from "../common/ThemeToggle";
 import { navLinks } from "../../utils/constants";
@@ -40,6 +40,15 @@ const Navbar = ({ theme, onToggleTheme }) => {
                 </a>
               ))}
             </nav>
+            <a
+              href="/Manish-Washimkar-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="premium-button-secondary hidden gap-2 px-5 py-2.5 lg:inline-flex"
+            >
+              <FaArrowDown className="text-xs" />
+              View Resume
+            </a>
             <ThemeToggle theme={theme} onToggle={onToggleTheme} />
             <button
               type="button"
@@ -64,6 +73,16 @@ const Navbar = ({ theme, onToggleTheme }) => {
                 {item.label}
               </a>
             ))}
+            <a
+              href="/Manish-Washimkar-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              onClick={handleNavClick}
+              className="premium-button-secondary mt-2 w-full gap-2"
+            >
+              <FaArrowDown className="text-xs" />
+              View Resume
+            </a>
           </nav>
         ) : null}
       </div>
