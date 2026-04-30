@@ -16,6 +16,18 @@ const getRequestBody = (body) => {
   }
 };
 
+const getDatabaseErrorMessage = (error) => {
+  if (error?.message === "MONGODB_URI is not configured.") {
+    return error.message;
+  }
+
+  if (error?.code === "ENOTFOUND" || error?.message?.includes("querySrv ENOTFOUND")) {
+    return "MongoDB connection failed. Check that MONGODB_URI uses your real Atlas cluster hostname.";
+  }
+
+  return "Unable to save your message right now.";
+};
+
 const validateContactData = (body = {}) => {
   const name = getTrimmedString(body.name);
   const email = getTrimmedString(body.email).toLowerCase();
@@ -69,9 +81,11 @@ export default async function handler(req, res) {
       data: contact,
     });
   } catch (error) {
+    console.error("Contact submission failed:", error);
+
     return res.status(500).json({
       success: false,
-      message: error.message || "Something went wrong.",
+      message: getDatabaseErrorMessage(error),
     });
   }
 }
