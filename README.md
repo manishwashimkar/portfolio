@@ -158,6 +158,7 @@ Deploy `backend/` to Render or Railway.
   - `PORT=5000`
   - `MONGODB_URI=<mongodb-atlas-uri>`
   - `CLIENT_URL=https://your-frontend-domain.com`
+    - Multiple frontend origins can be comma-separated, for example `http://localhost:5173,https://manishwashimkar.vercel.app`
 
 ### MongoDB Atlas
 
