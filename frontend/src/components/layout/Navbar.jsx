@@ -41,7 +41,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
               ))}
             </nav>
             <a
-              href="/Manish-Washimkar-Resume.pdf"
+              href="/manish_washimkar_resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="premium-button-secondary hidden gap-2 px-5 py-2.5 lg:inline-flex"
@@ -74,7 +74,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
               </a>
             ))}
             <a
-              href="/Manish-Washimkar-Resume.pdf"
+              href="/manish_washimkar_resume.pdf"
               target="_blank"
               rel="noreferrer"
               onClick={handleNavClick}
