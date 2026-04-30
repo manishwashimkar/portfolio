@@ -20,6 +20,18 @@ const initialFormState = {
   message: "",
 };
 
+const getContactSubmitErrorMessage = (error) => {
+  if (error?.response?.data?.message) {
+    return error.response.data.message;
+  }
+
+  if (error?.code === "ERR_NETWORK" || !error?.response) {
+    return "Unable to reach the backend API. Check the API URL and make sure the backend is running.";
+  }
+
+  return "Something went wrong while sending your message.";
+};
+
 const HomePage = () => {
   const { theme, toggleTheme } = useTheme();
   const [projects, setProjects] = useState([]);
@@ -80,7 +92,7 @@ const HomePage = () => {
       setFormErrors(nextErrors);
       setSubmitState({
         status: "error",
-        message: error?.response?.data?.message || "Something went wrong while sending your message.",
+        message: getContactSubmitErrorMessage(error),
       });
     }
   };
