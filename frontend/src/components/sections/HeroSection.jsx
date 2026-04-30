@@ -71,7 +71,7 @@ const HeroSection = () => (
             View Projects
           </a>
           <a
-            href="/Manish-Washimkar-Resume.pdf"
+            href="/manish_washimkar_resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="premium-button-secondary w-full gap-2 sm:w-auto"
