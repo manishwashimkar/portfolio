@@ -103,6 +103,31 @@ Frontend default URL: `http://localhost:5173`
 
 Backend default URL: `http://localhost:5000`
 
+### Testing from a mobile phone on local Wi-Fi
+
+When opening the site from a phone, do not use `localhost` in `VITE_API_URL`. On a phone, `localhost` means the phone itself, not your laptop.
+
+1. Find your computer's local IP address, for example `192.168.1.10`.
+2. Set `frontend/.env`:
+
+```env
+VITE_API_URL=http://192.168.1.10:5000/api
+```
+
+3. Start Vite so other devices can reach it:
+
+```bash
+npm --prefix frontend run dev -- --host 0.0.0.0
+```
+
+4. Open the frontend on your phone:
+
+```text
+http://192.168.1.10:5173
+```
+
+Keep the backend running on port `5000`.
+
 ## API Endpoints
 
 ### `GET /api/health`
@@ -116,6 +141,7 @@ Returns project data from MongoDB. If the `projects` collection is empty, the AP
 ### `POST /api/contacts`
 
 Stores a contact form submission in MongoDB.
+Submissions are saved in the `contacts` collection with `name`, `email`, `message`, `createdAt`, and `updatedAt` fields.
 
 Request body:
 
@@ -159,6 +185,15 @@ Deploy `backend/` to Render or Railway.
   - `MONGODB_URI=<mongodb-atlas-uri>`
   - `CLIENT_URL=https://your-frontend-domain.com`
     - Multiple frontend origins can be comma-separated, for example `http://localhost:5173,https://manishwashimkar.vercel.app`
+    - Use `CLIENT_URL=*` only when the contact API should accept browser requests from any website.
+
+For the contact form to collect data from any device, the frontend must use a public backend URL:
+
+```env
+VITE_API_URL=https://your-backend-domain.com/api
+```
+
+Do not use `localhost` in deployed frontend settings. Phones and other devices cannot reach your laptop's `localhost`.
 
 ### MongoDB Atlas
 
@@ -166,6 +201,7 @@ Deploy `backend/` to Render or Railway.
 2. Create a database user.
 3. Whitelist your deployment provider IPs or allow trusted access.
 4. Copy the connection string into `MONGODB_URI`.
+5. After deployment, open `https://your-backend-domain.com/api/health` to confirm the backend is running before testing the contact form.
 
 ## Customization Notes
 
