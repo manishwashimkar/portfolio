@@ -170,10 +170,13 @@ Validation rules:
 
 Deploy `frontend/` to Vercel or Netlify.
 
+- Root directory: `frontend`
 - Build command: `npm run build`
 - Output directory: `dist`
 - Environment variable:
-  - `VITE_API_URL=https://your-backend-domain.com/api`
+  - If using the included Vercel API routes, leave `VITE_API_URL` empty or set `VITE_API_URL=/api`
+  - Add `MONGODB_URI=<mongodb-atlas-uri>` to the same Vercel project so `/api/contacts` can save submissions
+  - If using a separate backend, set `VITE_API_URL=https://your-backend-domain.com/api`
 
 ### Backend deployment
 
