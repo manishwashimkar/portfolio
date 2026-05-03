@@ -46,7 +46,7 @@ const HomePage = () => {
       try {
         setProjectsLoading(true);
         const data = await fetchProjects();
-        setProjects(data);
+        setProjects(Array.isArray(data) ? data : fallbackProjects);
       } catch (error) {
         setProjects(fallbackProjects);
         setProjectsError(
