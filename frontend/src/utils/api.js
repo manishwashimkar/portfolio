@@ -26,7 +26,7 @@ const configuredApiUrl = import.meta.env.VITE_API_URL?.trim();
 const baseURL = configuredApiUrl
   ? normalizeApiUrl(configuredApiUrl)
   : import.meta.env.DEV
-    ? "http://localhost:5000/api"
+    ? "http://localhost:7001/api"
     : "/api";
 
 const api = axios.create({
@@ -38,7 +38,20 @@ const api = axios.create({
 
 export const fetchProjects = async () => {
   const { data } = await api.get("/projects");
-  return data.data;
+
+  if (Array.isArray(data)) {
+    return data;
+  }
+
+  if (Array.isArray(data?.data)) {
+    return data.data;
+  }
+
+  if (Array.isArray(data?.projects)) {
+    return data.projects;
+  }
+
+  throw new Error("Projects response did not include a project list.");
 };
 
 export const submitContact = async (payload) => {
