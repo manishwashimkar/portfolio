@@ -3,7 +3,10 @@ import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 import SectionHeading from "../common/SectionHeading";
 
-const ProjectsSection = ({ projects, isLoading, error }) => (
+const ProjectsSection = ({ projects = [], isLoading, error }) => {
+  const projectItems = Array.isArray(projects) ? projects : [];
+
+  return (
   <section id="projects" className="py-14 sm:py-20">
     <div className="section-shell">
       <div className="section-frame">
@@ -34,7 +37,7 @@ const ProjectsSection = ({ projects, isLoading, error }) => (
             ) : null}
 
             <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {projects.map((project, index) => (
+              {projectItems.map((project, index) => (
                 <motion.article
                   key={project.title}
                   className="glass-panel group relative flex h-full flex-col overflow-hidden p-5 shadow-[0_18px_34px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-none"
@@ -78,7 +81,7 @@ const ProjectsSection = ({ projects, isLoading, error }) => (
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {project.techStack.map((item) => (
+                    {(Array.isArray(project.techStack) ? project.techStack : []).map((item) => (
                       <span
                         key={item}
                         className="rounded-full border border-slate-200 bg-stone-50 px-3 py-1 text-xs font-medium text-slate-700 transition duration-300 group-hover:border-accent/40 dark:border-white/10 dark:bg-slate-950 dark:text-slate-200"
@@ -95,6 +98,7 @@ const ProjectsSection = ({ projects, isLoading, error }) => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default ProjectsSection;
