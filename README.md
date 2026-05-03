@@ -78,11 +78,11 @@ cp frontend/.env.example frontend/.env
 Update the values:
 
 - `backend/.env`
-  - `PORT=5000`
+  - `PORT=7001`
   - `MONGODB_URI=<your-mongodb-atlas-uri>`
   - `CLIENT_URL=http://localhost:5173`
 - `frontend/.env`
-  - `VITE_API_URL=http://localhost:5000/api`
+  - `VITE_API_URL=http://localhost:7001/api`
 
 ### 3. Run the apps
 
@@ -101,7 +101,7 @@ cd frontend && npm run dev
 
 Frontend default URL: `http://localhost:5173`
 
-Backend default URL: `http://localhost:5000`
+Backend default URL: `http://localhost:7001`
 
 ### Testing from a mobile phone on local Wi-Fi
 
@@ -111,7 +111,7 @@ When opening the site from a phone, do not use `localhost` in `VITE_API_URL`. On
 2. Set `frontend/.env`:
 
 ```env
-VITE_API_URL=http://192.168.1.10:5000/api
+VITE_API_URL=http://192.168.1.10:7001/api
 ```
 
 3. Start Vite so other devices can reach it:
@@ -126,7 +126,7 @@ npm --prefix frontend run dev -- --host 0.0.0.0
 http://192.168.1.10:5173
 ```
 
-Keep the backend running on port `5000`.
+Keep the backend running on port `7001`.
 
 ## API Endpoints
 
@@ -184,7 +184,7 @@ Deploy `backend/` to Render or Railway.
 
 - Start command: `npm start`
 - Environment variables:
-  - `PORT=5000`
+  - `PORT=7001`
   - `MONGODB_URI=<mongodb-atlas-uri>`
   - `CLIENT_URL=https://your-frontend-domain.com`
     - Multiple frontend origins can be comma-separated, for example `http://localhost:5173,https://manishwashimkar.vercel.app`
