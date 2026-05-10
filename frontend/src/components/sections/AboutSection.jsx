@@ -9,8 +9,8 @@ const AboutSection = () => (
       <div className="section-frame">
         <SectionHeading
           eyebrow="About Me"
-          title="I turn product ideas into stable, user-friendly applications."
-          description="My work blends polished frontend execution with practical backend systems, helping teams launch experiences that feel fast, clear, and dependable."
+          title="I build clean MERN applications with a practical product mindset."
+          description="Focused on React interfaces, Express APIs, MongoDB data flows, and the small details that make web apps feel reliable."
         />
 
         <div className="mt-10 grid gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -22,15 +22,13 @@ const AboutSection = () => (
             transition={{ duration: 0.5 }}
           >
             <p className="text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base sm:leading-8">
-              I build full-stack web products with a strong focus on clean architecture, accessible
-              interfaces, and details that make software feel professional. Whether I am designing a
-              landing page, shaping API routes, or modeling data in MongoDB, I aim for solutions that
-              stay readable and scale well over time.
+              I am a MERN Stack Developer who enjoys turning ideas into responsive, useful web
+              applications. I like building interfaces that are easy to use and backend routes that
+              are simple to understand.
             </p>
             <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300 sm:mt-5 sm:text-base sm:leading-8">
-              My preferred stack centers on React, Tailwind CSS, Node.js, Express, and MongoDB, and I
-              enjoy crafting systems where the UI and backend feel thoughtfully connected. I care about
-              shipping work that feels polished to users and practical for teams to maintain.
+              My current focus is React, Tailwind CSS, Node.js, Express, and MongoDB. I learn best by
+              shipping projects, improving the details, and keeping the codebase readable.
             </p>
           </motion.div>
 
