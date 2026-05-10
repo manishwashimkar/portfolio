@@ -13,11 +13,20 @@ import { SiExpress, SiJavascript, SiMongodb, SiTailwindcss } from "react-icons/s
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Stack", href: "#stack" },
+  { label: "Skills", href: "#stack" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const profile = {
+  fullName: "Manish Washimkar",
+  role: "MERN Stack Developer",
+  location: "India, open to remote work worldwide",
+  description:
+    "I design and develop full-stack applications with React, Node.js, Express, and MongoDB, balancing elegant interfaces with dependable backend architecture for businesses, founders, and teams that value clarity.",
+  image: "/profile-photo.jpeg",
+};
 
 export const stats = [
   { label: "Years building products", value: "3+" },
@@ -26,9 +35,9 @@ export const stats = [
 ];
 
 export const highlights = [
-  "Build performant React interfaces with maintainable component systems.",
-  "Design clean REST APIs with Express, MongoDB, and predictable validation flows.",
-  "Collaborate across product, design, and engineering to ship polished experiences.",
+  "React interfaces that feel fast, clear, and responsive.",
+  "Express APIs with simple routes, validation, and MongoDB models.",
+  "Project-first learning with attention to polish and maintainability.",
 ];
 
 export const techStack = [
@@ -63,6 +72,27 @@ export const experienceTimeline = [
     company: "Independent Learning & Client Work",
     summary:
       "Strengthened core JavaScript, backend fundamentals, and database design while shipping practical solutions for real business needs.",
+  },
+];
+
+export const credibilitySignals = [
+  {
+    label: "Project Outcomes",
+    title: "12+ practical builds shipped across frontend and full-stack workflows.",
+    detail:
+      "Portfolio sites, dashboard interfaces, API integrations, and MongoDB-backed product flows built with a focus on clarity and maintainability.",
+  },
+  {
+    label: "Delivery Style",
+    title: "Readable code, responsive UI, and simple backend contracts.",
+    detail:
+      "I keep components reusable, routes predictable, and user flows polished so projects are easier to extend after launch.",
+  },
+  {
+    label: "Open Profiles",
+    title: "Public work and professional presence are easy to review.",
+    detail:
+      "Browse repositories, project history, and professional updates through the links below before starting a conversation.",
   },
 ];
 
