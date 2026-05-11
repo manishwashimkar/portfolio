@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
 import SectionHeading from "../common/SectionHeading";
+import { socialLinks } from "../../utils/constants";
+
+const contactShortcuts = socialLinks.filter(({ label }) => ["Email", "LinkedIn", "GitHub"].includes(label));
 
 const ContactSection = ({
   formData,
@@ -20,15 +23,32 @@ const ContactSection = ({
               description="If you have a project, freelance opportunity, or collaboration in mind, I’d love to hear about it."
             />
             <div className="mt-6 space-y-3 text-sm leading-7 text-slate-600 dark:text-slate-300 sm:mt-8 sm:space-y-4">
-              <p className="rounded-2xl border border-slate-200/80 bg-white/75 px-4 py-3 shadow-[0_14px_28px_rgba(15,23,42,0.05)] dark:border-white/10 dark:bg-slate-900/55 dark:shadow-none">
+              <a
+                href="mailto:manishwashimkar45@gmail.com"
+                className="block rounded-2xl border border-slate-200/80 bg-white/75 px-4 py-3 shadow-[0_14px_28px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_18px_32px_rgba(138,91,61,0.12)] dark:border-white/10 dark:bg-slate-900/55 dark:shadow-none"
+              >
                 Email: manishwashimkar45@gmail.com
-              </p>
+              </a>
               <p className="rounded-2xl border border-slate-200/80 bg-white/75 px-4 py-3 shadow-[0_14px_28px_rgba(15,23,42,0.05)] dark:border-white/10 dark:bg-slate-900/55 dark:shadow-none">
                 Location: India, open to remote work worldwide
               </p>
               <p className="rounded-2xl border border-slate-200/80 bg-white/75 px-4 py-3 shadow-[0_14px_28px_rgba(15,23,42,0.05)] dark:border-white/10 dark:bg-slate-900/55 dark:shadow-none">
                 Typical focus: full-stack product builds, portfolio sites, dashboards, and API integrations
               </p>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {contactShortcuts.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/80 px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_18px_30px_rgba(138,91,61,0.12)] dark:border-white/10 dark:bg-slate-900/70 dark:text-slate-200"
+                >
+                  <Icon className="text-sm" />
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
 
