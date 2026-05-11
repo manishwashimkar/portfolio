@@ -3,6 +3,7 @@ const fallbackProjects = [
     title: "Portfolio Website",
     description:
       "A refined personal portfolio experience for Manish with smooth interactions, reusable sections, and a Mongo-backed contact workflow.",
+    outcomes: ["Built responsive portfolio sections", "Added Mongo-backed contact flow", "Polished motion and theme UX"],
     techStack: ["React", "Tailwind CSS", "Framer Motion", "Express", "MongoDB"],
     githubUrl: "https://github.com/manishwashimkar/portfolio",
     liveUrl: "",
@@ -11,6 +12,7 @@ const fallbackProjects = [
     title: "Ops Dashboard",
     description:
       "An internal dashboard for tracking delivery metrics, user activity, and team status across multiple product streams.",
+    outcomes: ["Built admin dashboard", "Integrated JWT authentication", "Reduced manual status tracking"],
     techStack: ["MERN", "Chart.js", "JWT", "Render"],
     githubUrl: "https://github.com/manishwashimkar",
     liveUrl: "",
@@ -19,6 +21,7 @@ const fallbackProjects = [
     title: "Commerce Studio",
     description:
       "A storefront and admin experience focused on clean UX, API consistency, and scalable component patterns.",
+    outcomes: ["Created storefront and admin views", "Structured reusable product APIs", "Responsive MERN app"],
     techStack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     githubUrl: "https://github.com/manishwashimkar",
     liveUrl: "",
